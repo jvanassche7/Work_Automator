@@ -60,5 +60,8 @@ typedef bool _Bool;
 #undef cli
 #define cli()
 #include "Work_Automator.ino"
+#include "Button_Functions.ino"
+#include "interrupts.ino"
+#include "welcome.ino"
 #endif
 #endif

@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "name": "Visual Micro",
+      "intelliSenseMode": "windows-msvc-x86",
+      "includePath": [
+        "${projectRoot}..\\Work_Automator",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\libraries\\USBComposite",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\cores\\maple",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\cores\\maple\\avr",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\cores\\maple\\libmaple",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\cores\\maple\\stm32f1",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\variants\\generic_stm32f103c",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\system\\libmaple",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\system\\libmaple\\include",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\system\\libmaple\\stm32f1\\include",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\system\\libmaple\\usb\\stm32f1",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\stm32duino\\hardware\\STM32F1\\2020.6.20\\system\\libmaple\\usb\\usb_lib",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\STM32\\tools\\CMSIS\\5.5.1\\CMSIS\\Core\\Include\\",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\9.2.1\\arm-none-eabi",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\9.2.1",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\9.2.1\\tr1",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\sys",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\9.2.1\\arm-none-eabi\\bits",
+        "${projectRoot}..\\..\\..\\..\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include"
+      ],
+      "defines": [
+        "DEBUG_LEVEL=DEBUG_NONE",
+        "BOARD_generic_stm32f103c",
+        "VECT_TAB_ADDR=0x8000000",
+        "ERROR_LED_PORT=GPIOC",
+        "ERROR_LED_PIN=13",
+        "F_CPU=72000000L",
+        "ARDUINO=108012",
+        "ARDUINO_GENERIC_STM32F103C",
+        "ARDUINO_ARCH_STM32F1",
+        "CONFIG_MAPLE_MINI_NO_DISABLE_DEBUG=1",
+        "SERIAL_USB",
+        "GENERIC_BOOTLOADER",
+        "MCU_STM32F103C8",
+        "__STM32F1__",
+        "__cplusplus=201103L",
+        "_VMICRO_INTELLISENSE"
+      ]
+    }
+  ]
+}

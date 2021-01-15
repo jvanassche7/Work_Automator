@@ -15,7 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Work_Automator.ino" />
+    <ClInclude Include="__vm\.Work_Automator.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="__vm\.Sketches.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
- 
+  <ItemGroup>
+    <None Include="Sketches\Work_Automator.ino" />
+    <None Include="Sketches\interrupts.ino" />
+    <None Include="Sketches\Button_Functions.ino" />
+    <None Include="Sketches\welcome.ino" />
+  </ItemGroup>
 </Project>
