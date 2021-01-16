@@ -28,22 +28,13 @@ void welcome() {
 	Keyboard.println("<Hardware: 1.0>");
 	delay(250);
 
-	Keyboard.println("The Work Automator is designed and programmed to streamline work in Microsoft Teams, Office, and JDE, with the capability for rapid and unlimited growth. It consists of a Dial to set the functioning Mode and several buttons to carry out specified tasks. It also contains indicator LEDs. And Chris sucks");
-	Keyboard.println("INSTRUCTIONS FOR USE:");
-	Keyboard.println("Mode A: Teams");
-	Keyboard.println(" ");
-	Keyboard.println("Button 1: Activate Meeting		Button 2: Toggle Mute");
-	Keyboard.println("Always start a meeting by manually muting. Press button 1 to turn on the White LED indicating you are in a meeting and activating button 2.Once in the meeting, press button 2 to unmute. This will activate the Red LED indicating a hot mic. Press button 2 again to mute, which deactivates the Red Live LED.");
-	Keyboard.println(" ");
-	Keyboard.println("************TBD*************");
+	Keyboard.println("For instructions please visit:");
+	Keyboard.println("https://github.com/jvanassche7/Work_Automator");
+	
+	
 	//JDE login
 		//"INQUSR", TAB, "TCVSINQUSR", ENTER, wait few sec, repeat, ENTER (to get to main menu)
 	//add/delete rows = ctr +/- (word/excel)
 	//format painter?
-
-
-	leftColor(50, 50, 50);			//set left to white and turn right off
-	rightColor(0, 0, 0);
-
 }
 
