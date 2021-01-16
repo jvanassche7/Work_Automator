@@ -30,15 +30,17 @@ bool state_mute = 0;
 bool state_meet = 0;
 
 bool eastButt_new;
-bool westButt_new = 0;
+bool westButt_new;
+bool northButt_new;
+
 
 bool eastButt_old = 1;
 bool westButt_old = 1;		//current_state
+bool northButt_old = 1;
 
 unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
-unsigned long debounceDelay = 10;    // the debounce time; increase if the output flickers
-int counter = 0;				//debounce counter
-int debounce_count = 10;		//number of samples to see before makeing a decision
+unsigned long debounceDelay = 200;    // the debounce time; increase if the output flickers
+
 
 volatile bool buttPress_flag	= LOW;		//flag set if any buttons are pressed
 volatile bool northPress_flag	= LOW;
@@ -100,23 +102,43 @@ void loop() {
 	int dial = map(potReading, 0, 4095, 0, 3);		//map takes the reading and the range of the ADC, then the range you want it broken into. So 4095 / 4 = setting range
 
 	switch (dial) {
-	case 0:											//Teams controller
+	case 0: {										//Teams controller
 		leftColor(70, 80, 0);					//purple = teams mode, keep this always on in this mode
 
-		if (state_meet) {				//state meet is toggled in button_functions
-			rightColor(75, 50, 50);
+		if (buttPress_flag) {
+			buttPress_detect_case0();
+			buttPress_flag = LOW;
 		}
-		else {							//turns the meeting light off
+		if (state_meet) {
+			rightColor(75, 0, 25);
+		}
+		if (!state_meet) {
 			rightColor(0, 0, 0);
-			state_mute = 0;				//turn mute light off when meeting ends
 		}
+		if (state_mute) {
+			rightColor(75, 0, 0);
+		}
+		
+		
 
 		break; //end case 0
-	
+	}
 
 	case 1:											//JDE login
 		leftColor(0, 0, 100);
-		rightColor(0, 0, 100);
+		rightColor(0, 0, 0);
+
+		if (state_meet) {				//if dial setting changed during meeting
+			rightColor(75, 0, 25);
+		}
+		if (state_mute) {
+			rightColor(75, 0, 0);		//keep red light on when unmuted and changing dial setting
+		}
+
+		if (buttPress_flag) {
+			buttPress_detect_case1();
+			buttPress_flag = LOW;
+		}
 
 		if (digitalRead(westButt) == LOW) {
 			//print Login Info
@@ -125,7 +147,14 @@ void loop() {
 		}
 		break;
 	case 2:											//Office Tools
-		leftColor(100, 100, 100);
+		leftColor(10, 60, 10);
+
+		if (state_meet) {				//if dial setting changed during meeting
+			rightColor(75, 0, 25);
+		}
+		if (state_mute) {
+			rightColor(75, 0, 0);		//keep red light on when unmuted and changing dial setting
+		}
 
 		if (digitalRead(southButt) == LOW) {
 			rightColor(0, 50, 50);
@@ -134,6 +163,13 @@ void loop() {
 		break;
 	case 3:											//TBD
 		leftColor(75, 0, 75);
+
+		if (state_meet) {				//if dial setting changed during meeting
+			rightColor(75, 0, 25);
+		}
+		if (state_mute) {
+			rightColor(75, 0, 0);		//keep red light on when unmuted and changing dial setting
+		}
 
 		if (digitalRead(northButt) == LOW) {
 			rightColor(75, 0, 75);
@@ -147,6 +183,8 @@ void loop() {
 	delay(100);
 }
 
+
+//Set the LED colors with these functions
 void leftColor(int leftRed_value, int leftBlue_value, int leftGreen_value) {
 	analogWrite(leftRed, leftRed_value);
 	analogWrite(leftBlue, leftBlue_value);
