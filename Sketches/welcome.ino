@@ -22,7 +22,7 @@ void welcome() {
 	delay(250);
 	Keyboard.println("Brought to you by J4 Laboratories...");
 	delay(500);
-	Keyboard.println("...with consulting considerations by CNC Designs");
+	Keyboard.println("...with consultation and considerations by CNC Designs");
 	delay(250);
 	Keyboard.println("<Firmware: 1.0>");
 	Keyboard.println("<Hardware: 1.0>");

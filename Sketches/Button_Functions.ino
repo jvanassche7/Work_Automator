@@ -2,6 +2,7 @@
 
 // ===============================================================================================
 //CASE 0
+//Teams
 
 void buttPress_detect_case0() {
 	if (northPress_flag) {
@@ -75,8 +76,9 @@ void buttPress_detect_case0() {
 
 // ===========================================================================================================
 //CASE 1
+//JDE
 
-void buttPress_detect_case1() {
+void buttPress_detect_case1() {				//login with generic username and password
 
 	if (northPress_flag) {
 		northButt_old = digitalRead(northButt);
@@ -112,8 +114,31 @@ void buttPress_detect_case1() {
 	}
 
 
-	if (westPress_flag) {
-		westPress_flag = LOW;
+	if (westPress_flag) {						//to reconnect to login
+		westButt_old = digitalRead(westButt);
+		lastDebounceTime = millis();	//timestamp for debounce
+		while ((lastDebounceTime + debounceDelay) >= millis()) {	//while still in debounce window
+			westPress_flag = LOW;									//keep this button from being flagged as pressed
+		}
+
+		westButt_new = digitalRead(westButt);
+		if (westButt_old != westButt_new) {
+			rightColor(255, 0, 125);
+			
+			Keyboard.press(KEY_LEFT_ALT);
+			delay(10);
+			Keyboard.release(KEY_LEFT_ALT);
+			delay(50);
+			Keyboard.press("c");
+			delay(10);
+			Keyboard.release("c");
+			delay(25);
+			Keyboard.press("c");
+			delay(10);
+			Keyboard.release("c");
+			rightColor(0, 0, 0);
+
+		}
 	}
 
 
