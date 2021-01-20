@@ -13,11 +13,11 @@
 
  Buttons Layout and Names:
 
-- - - - - -NORTH- - - - - -
+_ _ _ _ _ _NORTH_ _ _ _ _ _
 
 WEST___________________EAST
 
-- - - - - -SOUTH- - - - - - 
+_ _ _ _ _ _SOUTH_ _ _ _ _ _
 
 ## Teams
 ### Purple
