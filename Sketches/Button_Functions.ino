@@ -7,7 +7,7 @@
 void buttPress_detect_case0() {
 	if (northPress_flag) {
 		northPress_flag = LOW;
-
+		//TBD
 	}
 
 	if (eastPress_flag) {
@@ -20,7 +20,7 @@ void buttPress_detect_case0() {
 
 		if (eastButt_old && !eastButt_new && state_meet) {
 			if (!state_mute) {
-				rightColor(75, 0, 0);
+				rightColor(20000, 0, 0);
 				Keyboard.press(KEY_LEFT_CTRL);		//modifier/non printing keys are in USBHID.h
 				Keyboard.press(KEY_LEFT_SHIFT);
 				Keyboard.press('m');
@@ -30,7 +30,7 @@ void buttPress_detect_case0() {
 				state_mute = 1;
 			}
 			else {
-				rightColor(75, 0, 25);
+				rightColor(20000, 0, 6300);
 				state_mute = 0;
 
 				Keyboard.press(KEY_LEFT_CTRL);		//modifier/non printing keys are in USBHID.h
@@ -55,7 +55,7 @@ void buttPress_detect_case0() {
 		}
 		//state_meet = !state_meet;		//toggle state_meet
 		if (state_meet) {				//state meet is toggled in button_functions
-			rightColor(75, 0, 25);
+			rightColor(20000, 0, 6300);
 			
 		}
 		if (!state_meet) {							//turns the meeting light off
@@ -63,13 +63,10 @@ void buttPress_detect_case0() {
 			//state_meet = 0;
 			state_mute = 0;				//turn mute light off when meeting ends
 		}
-
 	}
-
-
 	if (southPress_flag) {
 		southPress_flag = LOW;
-
+		//TBD
 	}
 }
 
@@ -102,17 +99,13 @@ void buttPress_detect_case1() {				//login with generic username and password
 			delay(10);
 			Keyboard.release(KEY_RETURN);
 			rightColor(0, 0, 0);
-
 		}
-		
-	
 	}
-
 
 	if (eastPress_flag) {
 		eastPress_flag = LOW;
+		//TBD
 	}
-
 
 	if (westPress_flag) {						//to reconnect to login
 		westButt_old = digitalRead(westButt);
@@ -129,21 +122,72 @@ void buttPress_detect_case1() {				//login with generic username and password
 			delay(10);
 			Keyboard.release(KEY_LEFT_ALT);
 			delay(50);
-			Keyboard.press("c");
+			Keyboard.press('c');
 			delay(10);
-			Keyboard.release("c");
+			Keyboard.release('c');
 			delay(25);
-			Keyboard.press("c");
+			Keyboard.press('c');
 			delay(10);
-			Keyboard.release("c");
+			Keyboard.release('c');
 			rightColor(0, 0, 0);
-
 		}
 	}
 
+	if (southPress_flag) {
+		southPress_flag = LOW;
+		//TBD
+	}
+}
+//======================================================================================================
+//CASE 2
+//Office Tools
+
+void buttPress_detect_case2() {				
+
+	if (northPress_flag) {
+		northPress_flag = LOW;
+		//TBD
+	}
+
+	if (eastPress_flag) {
+		eastPress_flag = LOW;
+		//TBD
+	}
+
+	if (westPress_flag) {						
+		westPress_flag = LOW;
+		//TBD
+	}
 
 	if (southPress_flag) {
 		southPress_flag = LOW;
+		//TBD
+	}
+}
 
+//======================================================================================================
+//CASE 3
+//Office Tools / TBD
+
+void buttPress_detect_case3() {				
+
+	if (northPress_flag) {
+		northPress_flag = LOW;
+		//TBD
+	}
+
+	if (eastPress_flag) {
+		eastPress_flag = LOW;
+		//TBD
+	}
+
+	if (westPress_flag) {
+		westPress_flag = LOW;
+		//TBD
+	}
+
+	if (southPress_flag) {
+		southPress_flag = LOW;
+		//TBD
 	}
 }

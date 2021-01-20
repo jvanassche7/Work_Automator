@@ -13,20 +13,24 @@
 
  Buttons Layout and Names:
 
-___________NORTH___________
+- - - - - -NORTH- - - - - -
 
 WEST___________________EAST
 
-___________SOUTH___________
+- - - - - -SOUTH- - - - - - 
 
-##Teams
-###Purple
+## Teams
+### Purple
  **ALWAYS START A MEETING MUTED**
  When entering a meeting, press *WEST* once to activate the meeting and turn the right indicator LED on.
  Press *EAST* to unmute, which turns the indicator LED red to tell you the mic is live. Press *EAST* again to mute. The meeting must be activated by pressing *WEST* for the (un)mute to work.
 
 
-##JDE Login
-###Green
+## JDE Login
+### Green
  Press *NORTH* to automatically enter the generic JDE username and password. 
+ Press *WEST* to automatically reconnect to allow you to re-login.
+
+## TBD
+
 

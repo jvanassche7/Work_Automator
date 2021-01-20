@@ -1,7 +1,8 @@
-// Welcome message to run only once after boot/reset and only iff the north button is held 
+// Welcome message to run only once after boot/reset and only if the north button is held 
 
 void welcome() {
 	//*****add function to flash the LEDs while instructions are written
+	//thats probably not worth the effort
 
 	leftColor(100, 0, 0);
 	rightColor(100, 0, 0);				//set both to Red for now..
@@ -29,12 +30,6 @@ void welcome() {
 	delay(250);
 
 	Keyboard.println("For instructions please visit:");
-	Keyboard.println("https://github.com/jvanassche7/Work_Automator");
-	
-	
-	//JDE login
-		//"INQUSR", TAB, "TCVSINQUSR", ENTER, wait few sec, repeat, ENTER (to get to main menu)
-	//add/delete rows = ctr +/- (word/excel)
-	//format painter?
+	Keyboard.println("https://github.com/jvanassche7/Work_Automator");		//will need to give access or go public
 }
 
